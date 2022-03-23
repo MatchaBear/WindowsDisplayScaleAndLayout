@@ -10,7 +10,6 @@ explorer ms-settings:display && ping -n 2 127.1 >nul
     (
      echo;Set objShell=WScript.CreateObject("WScript.Shell"^)
      echo;WScript.Sleep 500 : objShell.AppActivate "Settings"
-     REM --> echo;objShell.SendKeys "{TAB}{TAB}{~}{UP}{UP}{UP}{UP}"
      echo;objShell.SendKeys "{TAB}"
 	 echo;WScript.Sleep 500
      echo;objShell.SendKeys "{TAB}"
@@ -21,8 +20,6 @@ explorer ms-settings:display && ping -n 2 127.1 >nul
 	 echo;WScript.Sleep 500
      echo;objShell.SendKeys " "
 	 echo;WScript.Sleep 500
-     REM --> echo;objShell.SendKeys "{UP}{UP}{UP}{DOWN}{~}"
-     REM --> echo;objShell.SendKeys "%%%{F4}"
     ) && cscript //nologo "%_tmp_send_keys_%"
 
 >nul 2>&1 (
